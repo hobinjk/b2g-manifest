@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="aosp"
-           fetch="https://android.googlesource.com/" />
-  <remote name="caf"
-          fetch="git://codeaurora.org/" />
-  <remote name="b2g"
-          fetch="git://github.com/mozilla-b2g/" />
-  <remote name="mozilla"
-	  fetch="git://github.com/mozilla/" />
-  <remote name="mozillaorg"
-      fetch="https://git.mozilla.org/releases" />
-  <remote name="apitrace" fetch="git://github.com/apitrace/" />
+  <include name="base-jb.xml"/>
+
+  <!-- maybe 4.3_r2.1 -->
   <default revision="refs/tags/android-4.0.4_r1.2"
            remote="caf"
            sync-j="4" />
 
-  <!-- Gonk specific things and forks -->
+  <!-- Gonk specific things and forks
   <project path="build" name="platform_build" remote="b2g" revision="master">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
@@ -28,13 +20,13 @@
   <project path="external/moztt" name="moztt" remote="b2g" revision="master" />
   <project path="external/apitrace" name="apitrace" remote="apitrace" revision="master" />
 
-  <!-- Stock Android things -->
+  Stock Android things
+  <project path="device/common" name="device/common" />
+  <project path="device/sample" name="device/sample" />
   <project path="abi/cpp" name="platform/abi/cpp" />
   <project path="bionic" name="platform/bionic" />
   <project path="bootable/recovery" name="platform/bootable/recovery" />
   <project path="development" name="platform/development" />
-  <project path="device/common" name="device/common" />
-  <project path="device/sample" name="device/sample" />
   <project path="external/apriori" name="platform_external_apriori" remote="b2g" revision="master" />
   <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" />
   <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" />
@@ -53,7 +45,6 @@
   <project path="external/giflib" name="platform/external/giflib" />
   <project path="external/gtest" name="platform/external/gtest" remote="aosp" />
   <project path="external/harfbuzz" name="platform/external/harfbuzz" />
-  <!-- icu4c is missing the default tag in caf, that's the *only* reason for the hardcode -->
   <project path="external/icu4c" name="platform/external/icu4c" revision="0fa67b93b831c6636ca18b152a1b1b14cc99b034" />
   <project path="external/iptables" name="platform/external/iptables" />
   <project path="external/jpeg" name="platform/external/jpeg" />
@@ -99,11 +90,14 @@
   <project path="system/extras" name="platform/system/extras" />
   <project path="system/media" name="platform/system/media" />
   <project path="system/netd" name="platform/system/netd" />
-  <project path="system/vold" name="platform/system/vold" />
+  <project path="system/vold" name="platform/system/vold" /> -->
 
   <!-- Nexus S 4G specific things -->
   <project path="device/samsung/crespo" name="android-device-crespo" remote="b2g" revision="master" />
   <project path="device/samsung/crespo4g" name="android-device-crespo4g" remote="b2g" revision="ics-b2g" />
+  <project name="device/generic/armv7-a-neon" path="device/generic/armv7-a-neon"/>
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
+  <project name="platform/hardware/ril" path="hardware/ril"/>
+  <project path="hardware/libhardware" name="platform/hardware/libhardware" />
 
 </manifest>
