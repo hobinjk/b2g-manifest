@@ -22,7 +22,7 @@
   <project name="librecovery" path="librecovery" remote="b2g" revision="master"/>
   <project name="moztt" path="external/moztt" remote="b2g" revision="master"/>
   <project name="rilproxy" path="rilproxy" remote="b2g" revision="master"/>
-  <project name="valgrind" path="external/valgrind" remote="b2g" revision="fxos"/>
+  <project name="platform/external/valgrind" path="external/valgrind"/>
   <project name="vex" path="external/VEX" remote="b2g" revision="fxos"/>
   <project name="apitrace" path="external/apitrace" remote="apitrace" revision="master"/>
 
@@ -121,6 +121,7 @@
   <project name="platform_prebuilts_misc" path="prebuilts/misc" remote="b2g" revision="b2g-4.4.2_r1"/>
   <project name="platform/prebuilts/ndk" path="prebuilts/ndk"/>
   <project name="platform_prebuilts_qemu-kernel" path="prebuilts/qemu-kernel" remote="b2g" revision="b2g-4.4.2_r1"/>
+  <project path="prebuilts/runtime" name="platform/prebuilts/runtime" />
   <project name="platform/prebuilts/sdk" path="prebuilts/sdk"/>
   <project name="platform/prebuilts/tools" path="prebuilts/tools"/>
   <project name="platform_system_bluetoothd" path="system/bluetoothd" remote="b2g" revision="master"/>
@@ -202,4 +203,41 @@
   <project path="external/chromium_org/tools/gyp" name="platform/external/chromium_org/tools/gyp" />
   <project path="external/chromium_org/v8" name="platform/external/chromium_org/v8" />
   <project path="external/v8" name="platform/external/v8" />
+
+  <project path="external/apache-http" name="platform/external/apache-http" />
+  <project path="external/apache-xml" name="platform/external/apache-xml" />
+  <project path="external/nist-sip" name="platform/external/nist-sip" />
+
+  <project path="sdk" name="platform/sdk" />
+
+  <project path="art" name="platform/art" />
+  <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" />
+  <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" />
+  <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" />
+  <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
+
+  <project path="frameworks/ex" name="platform/frameworks/ex" />
+
+  <project path="frameworks/mff" name="platform/frameworks/mff" />
+  <project path="frameworks/ml" name="platform/frameworks/ml" />
+  <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" />
+  <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
+  <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
+  <project path="frameworks/opt/datetimepicker" name="platform/frameworks/opt/datetimepicker" />
+  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
+  <project path="frameworks/opt/inputmethodcommon" name="platform/frameworks/opt/inputmethodcommon" />
+  <project path="frameworks/opt/mailcommon" name="platform/frameworks/opt/mailcommon" />
+  <project path="frameworks/opt/mms" name="platform/frameworks/opt/mms" />
+  <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" />
+  <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
+  <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
+  <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
+  <project path="pdk" name="platform/pdk" groups="pdk" />
+
+  <project path="frameworks/webview" name="platform/frameworks/webview" />
+
+  <project path="external/doclava" name="platform/external/doclava" />
+  <project path="external/antlr" name="platform/external/antlr" />
+  <project path="external/jsilver" name="platform/external/jsilver" />
 </manifest>
