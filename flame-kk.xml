@@ -1,5 +1,9 @@
 <?xml version="1.0" ?>
 <manifest>
+  <!--
+       gecko: gonkbufferqueuekk-update
+       build: reinstate-java
+   -->
   <remote fetch="https://android.googlesource.com/" name="aosp"/>
   <remote fetch="git://github.com/mozilla-b2g/" name="b2g"/>
   <remote fetch="git://github.com/mozilla/" name="mozilla"/>
@@ -8,7 +12,8 @@
   <remote fetch="https://git.mozilla.org/releases" name="mozillaorg"/>
   <remote name="t2m" fetch="git://github.com/t2m-foxfone/"/>
 
-  <default remote="caf" revision="LNX.LA.3.5.2.1.1" sync-j="4"/>
+  <default remote="caf" revision="kk_3.5" sync-j="4"/>
+  <!-- <default remote="caf" revision="LNX.LA.3.5.2.1.1" sync-j="4"/> -->
 
   <!-- base-kk -->
   <project name="platform_build" path="build" remote="b2g" revision="b2g-4.4.2_r1">
@@ -109,11 +114,11 @@
   <project name="platform/external/webrtc" path="external/webrtc"/>
   <project name="platform/external/yaffs2" path="external/yaffs2"/>
   <project name="platform/external/zlib" path="external/zlib"/>
-  <project name="platform/frameworks/base" path="frameworks/base" revision="b2g_kk_3.5"/>
-  <project name="platform/frameworks/native" path="frameworks/native" revision="b2g_kk_3.5"/>
+  <project name="platform/frameworks/base" path="frameworks/base"/>
+  <project name="platform/frameworks/native" path="frameworks/native"/>
   <project name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji"/>
   <project name="platform/frameworks/wilhelm" path="frameworks/wilhelm"/>
-  <project name="platform/hardware/libhardware" path="hardware/libhardware" revision="LNX.LF.3.5.2.2"/>
+  <project name="platform/hardware/libhardware" path="hardware/libhardware"/>
   <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy"/>
   <project name="platform/libcore" path="libcore"/>
   <project name="platform/libnativehelper" path="libnativehelper"/>
@@ -138,29 +143,30 @@
 
   <!-- Flame specific things -->
   <project name="device/generic/armv7-a-neon" path="device/generic/armv7-a-neon"/>
-  <project name="device/qcom/common" path="device/qcom/common" revision="b2g_kk_3.5"/>
+  <project name="device/qcom/common" path="device/qcom/common"/>
   <project name="device-flame" path="device/t2m/flame" remote="b2g" revision="kitkat"/>
-  <project name="codeaurora_kernel_msm" path="kernel" remote="b2g" revision="t2m-flame-3.4-kk"/>
+  <!-- <project name="codeaurora_kernel_msm" path="kernel" remote="b2g" revision="t2m-flame-3.4-kk"/> -->
+  <project name="kernel/msm" path="kernel"/>
   <project name="kernel_lk" path="bootable/bootloader/lk" remote="b2g" revision="foxfone-one-v1.4"/>
   <remove-project name="platform/bootable/recovery"/>
   <project name="platform_bootable_recovery" path="bootable/recovery" remote="b2g" revision="foxfone-one-v2.0"/>
   <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8"/>
   <project name="platform_external_libnfc-nci" path="external/libnfc-nci" remote="t2m" revision="foxfone-one"/>
   <project name="platform_external_libnfc-pn547" path="external/libnfc-pn547" remote="b2g" revision="master"/>
-  <project name="platform/frameworks/av" path="frameworks/av" revision="b2g_kk_3.5"/>
+  <project name="platform/frameworks/av" path="frameworks/av"/>
   <project name="platform/hardware/qcom/audio" path="hardware/qcom/audio"/>
   <project name="platform/hardware/qcom/camera" path="hardware/qcom/camera"/>
-  <project name="platform/hardware/qcom/display" path="hardware/qcom/display" revision="b2g_kk_3.5"/>
+  <project name="platform/hardware/qcom/display" path="hardware/qcom/display"/> <!-- revision="b2g_kk_3.5"/> -->
   <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps"/>
-  <project name="platform/hardware/qcom/media" path="hardware/qcom/media" revision="b2g_kk_3.5"/>
+  <project name="platform/hardware/qcom/media" path="hardware/qcom/media"/> <!-- revision="b2g_kk_3.5"/> -->
   <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan"/>
-  <project name="platform/hardware/ril" path="hardware/ril" revision="b2g_kk_3.5"/>
+  <project name="platform/hardware/ril" path="hardware/ril"/>
   <project name="platform/system/bluetooth" path="system/bluetooth"/>
-  <project name="platform/system/core" path="system/core" revision="b2g_kk_3.5"/>
+  <project name="platform/system/core" path="system/core"/>
   <project name="platform_system_nfcd" path="system/nfcd" remote="b2g" revision="master"/>
   <project name="platform/system/qcom" path="system/qcom"/>
   <project name="platform/vendor/qcom-opensource/wlan/prima" path="vendor/qcom/opensource/wlan/prima" revision="b2g_kk_3.5"/>
-  <project name="platform/vendor/qcom/msm8610" path="device/qcom/msm8610" revision="b2g_kk_3.5"/>
+  <project name="platform/vendor/qcom/msm8610" path="device/qcom/msm8610"/> <!-- revision="b2g_kk_3.5"/> -->
 
   <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk"/>
   <project path="external/clang" name="platform/external/clang" groups="pdk" />
@@ -224,20 +230,73 @@
   <project path="frameworks/opt/carddav" name="platform/frameworks/opt/carddav" />
   <project path="frameworks/opt/colorpicker" name="platform/frameworks/opt/colorpicker" />
   <project path="frameworks/opt/datetimepicker" name="platform/frameworks/opt/datetimepicker" />
-  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji" />
   <project path="frameworks/opt/inputmethodcommon" name="platform/frameworks/opt/inputmethodcommon" />
   <project path="frameworks/opt/mailcommon" name="platform/frameworks/opt/mailcommon" />
   <project path="frameworks/opt/mms" name="platform/frameworks/opt/mms" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" />
-  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony"/>
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
   <project path="pdk" name="platform/pdk" groups="pdk" />
 
-  <project path="frameworks/webview" name="platform/frameworks/webview" />
+  <project path="frameworks/webview" name="platform/frameworks/webview"/>
 
   <project path="external/doclava" name="platform/external/doclava" />
   <project path="external/antlr" name="platform/external/antlr" />
   <project path="external/jsilver" name="platform/external/jsilver" />
+
+  <project path="packages/apps/BasicSmsReceiver" name="platform/packages/apps/BasicSmsReceiver" />
+  <project path="packages/apps/Browser" name="platform/packages/apps/Browser" />
+  <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
+  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
+  <project path="packages/apps/Camera" name="platform/packages/apps/Camera" />
+  <project path="packages/apps/Camera2" name="platform/packages/apps/Camera2" />
+  <project path="packages/apps/CellBroadcastReceiver" name="platform/packages/apps/CellBroadcastReceiver" />
+  <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
+  <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" />
+  <project path="packages/apps/ContactsCommon" name="platform/packages/apps/ContactsCommon" />
+  <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" />
+  <project path="packages/apps/Dialer" name="platform/packages/apps/Dialer" />
+  <project path="packages/apps/Email" name="platform/packages/apps/Email" />
+  <project path="packages/apps/Exchange" name="platform/packages/apps/Exchange" />
+  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
+  <project path="packages/apps/Gallery2" name="platform/packages/apps/Gallery2" />
+  <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
+  <project path="packages/apps/InCallUI" name="platform/packages/apps/InCallUI" />
+  <project path="packages/apps/KeyChain" name="platform/packages/apps/KeyChain" />
+  <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" />
+  <project path="packages/apps/Launcher3" name="platform/packages/apps/Launcher3" />
+  <project path="packages/apps/LegacyCamera" name="platform/packages/apps/LegacyCamera" />
+  <project path="packages/apps/Mms" name="platform/packages/apps/Mms" />
+  <project path="packages/apps/Music" name="platform/packages/apps/Music" />
+  <project path="packages/apps/MusicFX" name="platform/packages/apps/MusicFX" />
+  <project path="packages/apps/Nfc" name="platform/packages/apps/Nfc" />
+  <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" />
+  <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
+  <project path="packages/apps/Phone" name="platform/packages/apps/Phone" />
+  <project path="packages/apps/PhoneCommon" name="platform/packages/apps/PhoneCommon" />
+  <project path="packages/apps/Protips" name="platform/packages/apps/Protips" />
+  <project path="packages/apps/Provision" name="platform/packages/apps/Provision" />
+  <project path="packages/apps/QuickSearchBox" name="platform/packages/apps/QuickSearchBox" />
+  <project path="packages/apps/Settings" name="platform/packages/apps/Settings" />
+  <project path="packages/apps/SmartCardService" name="platform/packages/apps/SmartCardService" />
+  <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
+  <project path="packages/apps/SpareParts" name="platform/packages/apps/SpareParts" />
+  <project path="packages/apps/SpeechRecorder" name="platform/packages/apps/SpeechRecorder" />
+  <!-- <project path="packages/apps/Stk" name="platform/packages/apps/Stk" /> -->
+  <project path="packages/apps/Tag" name="platform/packages/apps/Tag" />
+  <project path="packages/apps/UnifiedEmail" name="platform/packages/apps/UnifiedEmail" />
+  <project path="packages/apps/VideoEditor" name="platform/packages/apps/VideoEditor" />
+  <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />
+
+  <project path="external/srec" name="platform/external/srec" />
+
+  <project path="development" name="platform/development" />
+  <project path="external/xmp_toolkit" name="platform/external/xmp_toolkit" />
+  <project path="external/mp4parser" name="platform/external/mp4parser" />
+  <project path="external/libexif" name="platform/external/libexif" />
+
+  <project path="packages/services/Telephony" name="platform/packages/services/Telephony" />
+  <project path="frameworks/opt/telephony-msim" name="platform/frameworks/opt/telephony-msim"/>
 </manifest>
