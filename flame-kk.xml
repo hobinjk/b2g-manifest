@@ -156,17 +156,17 @@
   <project name="platform/frameworks/av" path="frameworks/av"/>
   <project name="platform/hardware/qcom/audio" path="hardware/qcom/audio"/>
   <project name="platform/hardware/qcom/camera" path="hardware/qcom/camera"/>
-  <project name="platform/hardware/qcom/display" path="hardware/qcom/display"/> <!-- revision="b2g_kk_3.5"/> -->
+  <project name="platform/hardware/qcom/display" path="hardware/qcom/display"/>
   <project name="platform/hardware/qcom/gps" path="hardware/qcom/gps"/>
-  <project name="platform/hardware/qcom/media" path="hardware/qcom/media"/> <!-- revision="b2g_kk_3.5"/> -->
+  <project name="platform/hardware/qcom/media" path="hardware/qcom/media"/>
   <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan"/>
   <project name="platform/hardware/ril" path="hardware/ril"/>
   <project name="platform/system/bluetooth" path="system/bluetooth"/>
   <project name="platform/system/core" path="system/core"/>
   <project name="platform_system_nfcd" path="system/nfcd" remote="b2g" revision="master"/>
   <project name="platform/system/qcom" path="system/qcom"/>
-  <project name="platform/vendor/qcom-opensource/wlan/prima" path="vendor/qcom/opensource/wlan/prima" revision="b2g_kk_3.5"/>
-  <project name="platform/vendor/qcom/msm8610" path="device/qcom/msm8610"/> <!-- revision="b2g_kk_3.5"/> -->
+  <project name="platform/vendor/qcom-opensource/wlan/prima" path="vendor/qcom/opensource/wlan/prima"/>
+  <project name="platform/vendor/qcom/msm8610" path="device/qcom/msm8610"/>
 
   <project path="external/compiler-rt" name="platform/external/compiler-rt" groups="pdk"/>
   <project path="external/clang" name="platform/external/clang" groups="pdk" />
