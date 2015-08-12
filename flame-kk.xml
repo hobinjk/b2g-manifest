@@ -283,4 +283,5 @@
   <project path="frameworks/opt/connectivity" name="platform/frameworks/opt/connectivity" />
 
   <project name="platform/vendor/qcom-opensource/location" path="vendor/qcom/opensource/location"/>
+  <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" />
 </manifest>
