@@ -115,8 +115,8 @@
   <project name="platform/external/webrtc" path="external/webrtc"/>
   <project name="platform/external/yaffs2" path="external/yaffs2"/>
   <project name="platform/external/zlib" path="external/zlib"/>
-  <project name="platform/frameworks/base" path="frameworks/base" remote="hobinjk" revision="flamdroid"/>
-  <project name="platform/frameworks/native" path="frameworks/native" remote="hobinjk" revision="flamdroid"/>
+  <project name="platform_frameworks_base" path="frameworks/base" remote="hobinjk" revision="flamdroid"/>
+  <project name="platform_frameworks_native" path="frameworks/native" remote="hobinjk" revision="flamdroid"/>
   <project name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji"/>
   <project name="platform/frameworks/wilhelm" path="frameworks/wilhelm"/>
   <project name="platform/hardware/libhardware" path="hardware/libhardware" revision="LNX.LF.3.5.2.2"/>
